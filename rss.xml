@@ -9,8 +9,28 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 19 Jun 2020 13:24:59 GMT</pubDate>
+    <pubDate>Thu, 30 Jul 2020 13:15:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>My blog is now using Hexo</title>
+      <link>https://monirulalom.com/article/my-blog-is-now-using-hexo/</link>
+      <guid>https://monirulalom.com/article/my-blog-is-now-using-hexo/</guid>
+      <pubDate>Thu, 30 Jul 2020 12:30:42 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;img src=&quot;/article/my-blog-is-now-using-hexo/hexo.png&quot; title=&quot;Hexo&quot;&gt;&lt;p&gt;I was using Jekyll for my blog. but there were some problems with tha
+        
+      
+      </description>
+      
+      
+      <content:encoded><![CDATA[<img src="/article/my-blog-is-now-using-hexo/hexo.png" title="Hexo"><p>I was using Jekyll for my blog. but there were some problems with that static site generator. I reinstalled Windows and was having trouble to build my website on my own PC. So I got frustrated and wanted to make a switch to a better static site generator. Searching the internet I learnt about Hexo. One thing I noticed is that it supports category and archive pages which were missing in Jekyll and Hexo is uses JavaScript. So , I made my decision to migrate my blog to Hexo.</p><p>Migration process took a long time. Finding a good looking theme and customizing took a long time. I also worked on SEO and other features for this blog. Disquss comment is removed and I am using Valine now. It is faster than Disquss and it has a cleaner interface.</p><p>Build procees in Hexo is faster than Jekyll. I have only few articles on my blog and it took so long to build with jekyll. I was very disappointed with the build time. Hexo generated the site fast and I am satisfied.</p><p>Hexo is based on JavaScript. I feel like home with JavaScript. Jekyll uses Ruby and I am not very familiar with ruby. I really enjoyed building the template for my own blog using JavaScript based templating.</p><p>Hopefully I am happy with Hexo and will publish content to my blog on regular intervals.</p>]]></content:encoded>
+      
+      <comments>https://monirulalom.com/article/my-blog-is-now-using-hexo/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Test sending emails in PHP with XAMPP and MailHog</title>

@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>My blog is now using Hexo</title>
+      <link href="/article/my-blog-is-now-using-hexo/"/>
+      <url>/article/my-blog-is-now-using-hexo/</url>
+      
+        <content type="html"><![CDATA[<img src="/article/my-blog-is-now-using-hexo/hexo.png" title="Hexo"><p>I was using Jekyll for my blog. but there were some problems with that static site generator. I reinstalled Windows and was having trouble to build my website on my own PC. So I got frustrated and wanted to make a switch to a better static site generator. Searching the internet I learnt about Hexo. One thing I noticed is that it supports category and archive pages which were missing in Jekyll and Hexo is uses JavaScript. So , I made my decision to migrate my blog to Hexo.</p><p>Migration process took a long time. Finding a good looking theme and customizing took a long time. I also worked on SEO and other features for this blog. Disquss comment is removed and I am using Valine now. It is faster than Disquss and it has a cleaner interface.</p><p>Build procees in Hexo is faster than Jekyll. I have only few articles on my blog and it took so long to build with jekyll. I was very disappointed with the build time. Hexo generated the site fast and I am satisfied.</p><p>Hexo is based on JavaScript. I feel like home with JavaScript. Jekyll uses Ruby and I am not very familiar with ruby. I really enjoyed building the template for my own blog using JavaScript based templating.</p><p>Hopefully I am happy with Hexo and will publish content to my blog on regular intervals.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Test sending emails in PHP with XAMPP and MailHog</title>
       <link href="/article/test-sending-emails-in-php-xampp-mailhog/"/>
       <url>/article/test-sending-emails-in-php-xampp-mailhog/</url>
