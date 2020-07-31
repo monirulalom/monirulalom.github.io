@@ -296,6 +296,25 @@
     </entry>
     
     
+    
+    <entry>
+      <title>WooCommerce Hints for Brackets extension released</title>
+      <link href="/article/woocommerce-hints-for-brackets-extension-released/"/>
+      <url>/article/woocommerce-hints-for-brackets-extension-released/</url>
+      
+        <content type="html"><![CDATA[<p>Today I have released an extension for one of my favorite code editor Brackets. I frequently work with WordPress and WooCommerce. An extension was available for getting WordPress related function hints but I was feeling the need of having something like this for WooCommerce also. Unfortunately there was not any feature in Brackets is available or no extension was available for this purpose.</p><p>So, I decided to build an extension for me and fellow developers. Here is some information about the extension.</p><h1 id="WooCommerce-Hints-for-Brackets"><a href="#WooCommerce-Hints-for-Brackets" class="headerlink" title="WooCommerce Hints for Brackets"></a>WooCommerce Hints for Brackets</h1><p>This extension adds auto-completion capability for WooCommerce 2.2+ functions.</p><p><strong><em>Features of this extension:</em></strong></p><p>✅ 1100+ functions , actions and filter auto-suggest/auto-completion support.</p><p><strong><em>Installation:</em></strong></p><p>You can install this extension with Extension manager. Search for it and click install. For detailed instruction visit the <a href="https://github.com/monirulalom/woocommerce-hints-for-brackets/wiki/Installation" target="_blank" rel="noopener">Wiki</a></p><p><strong><em>How to contribute?</em></strong></p><p>If you have any suggestion or you want to help, just fork this repository, make your changes and send a pull request. If you can’t code, simply open a <a href="https://github.com/monirulalom/woocommerce-hints-for-brackets/issues" target="_blank" rel="noopener">new issue</a> and I’ll do my best to help you!</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Brackets, Extension, WordPress, WooCommerce </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
