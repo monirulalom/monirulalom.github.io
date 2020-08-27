@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>How prevent SQL injection</title>
-      <link href="/article/how-prevent-sql-injection/"/>
-      <url>/article/how-prevent-sql-injection/</url>
+      <title>How to prevent SQL injection</title>
+      <link href="/article/how-to-prevent-sql-injection/"/>
+      <url>/article/how-to-prevent-sql-injection/</url>
       
-        <content type="html"><![CDATA[<br><img src="/article/how-prevent-sql-injection/sql-injection.jpg" title="Prevent SQL Injection"><p>A SQL injection attack consists of insertion or “injection” of a SQL query via the input data from the client to the application i.e web browser. A successful SQL injection exploit can read sensitive data from the database, modify database data , execute administration operations on the database.</p><p>Suppose, We are visiting a page to view a student information with id = 11 , the page URL is something like <code>student.php?id=11</code></p><p>Behind the scene this runs a query like this</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> <span class="keyword">id</span> = $<span class="keyword">id</span></span><br></pre></td></tr></table></figure><p>If we hit a URL <code>student.php?id=11 OR 1=1</code> this will run the query because this will run a query like this</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> <span class="keyword">id</span> = <span class="number">11</span> <span class="keyword">OR</span> <span class="number">1</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure><p>and this statement is TRUE and this will be executed in the database. Hackers will be able to inject malicious code and run it on the database.</p><p>To prevent SQL injection, we will have to sanitize the variable received from the user. There are may different ways to do this. One of the easiest ways is to use <code>prepare</code> method with PDO in PHP.</p><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$stmt = $pdo-&gt;prepare(<span class="string">'SELECT * FROM students WHERE id = :id'</span>);</span><br><span class="line">$stmt-&gt;bindParam(<span class="string">':id'</span>, id);</span><br><span class="line"></span><br><span class="line">$stmt-&gt;execute();</span><br></pre></td></tr></table></figure><p><code>prepare</code> method sanitizes the query and SQL injection does not work. It’s a very simple trick, isn’t it ?</p><p>Remember , Never assign unnecessary permission to a MySQL user. For better security you can install WAF(Web Application Firewall ) and configure it correctly, this will prevent the web app from different types of attacks.</p>]]></content>
+        <content type="html"><![CDATA[<br><p>A SQL injection attack consists of insertion or “injection” of a SQL query via the input data from the client to the application i.e web browser. A successful SQL injection exploit can read sensitive data from the database, modify database data , execute administration operations on the database.</p><p>Suppose, We are visiting a page to view a student information with id = 11 , the page URL is something like <code>student.php?id=11</code></p><p>Behind the scene this runs a query like this</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> <span class="keyword">id</span> = $<span class="keyword">id</span></span><br></pre></td></tr></table></figure><p>If we hit a URL <code>student.php?id=11 OR 1=1</code> this will run the query because this will run a query like this</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> <span class="keyword">id</span> = <span class="number">11</span> <span class="keyword">OR</span> <span class="number">1</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure><p>and this statement is TRUE and this will be executed in the database. Hackers will be able to inject malicious code and run it on the database.</p><p>To prevent SQL injection, we will have to sanitize the variable received from the user. There are may different ways to do this. One of the easiest ways is to use <code>prepare</code> method with PDO in PHP.</p><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$stmt = $pdo-&gt;prepare(<span class="string">'SELECT * FROM students WHERE id = :id'</span>);</span><br><span class="line">$stmt-&gt;bindParam(<span class="string">':id'</span>, id);</span><br><span class="line"></span><br><span class="line">$stmt-&gt;execute();</span><br></pre></td></tr></table></figure><p><code>prepare</code> method sanitizes the query and SQL injection does not work. It’s a very simple trick, isn’t it ?</p><p>Remember , Never assign unnecessary permission to a MySQL user. For better security you can install WAF(Web Application Firewall ) and configure it correctly, this will prevent the web app from different types of attacks.</p>]]></content>
       
       
       
@@ -35,7 +35,7 @@
       <link href="/article/useful-apps-for-muslims-that-i-use-and-recommend/"/>
       <url>/article/useful-apps-for-muslims-that-i-use-and-recommend/</url>
       
-        <content type="html"><![CDATA[<p>There are lots of apps available for Muslims. Most of them are ad supported or you need to pay some bucks. I used several apps but currently I am using three apps that are ad free and contains many premium feature and you do not need to pay for it.</p><h2 id="Quran-Mazid"><a href="#Quran-Mazid" class="headerlink" title="Quran Mazid"></a>Quran Mazid</h2><img src="/article/useful-apps-for-muslims-that-i-use-and-recommend/Quran%20Mazid.png" title="Quran Mazid Top app for muslims"><p>This app is one of the best Quran App for android. This has a nice and clean interface. So many translations and tafsir available in different languages. You can also see word by word meaning which is very helpful who wants to understand the language.</p><p>You can hear recitation from many different reciters. Recitations can be saved offline. Something offline translation disappear if you try to clean app cache but this app allows to store recitations in another directory and downloaded recitations won’t disappear.</p><h2 id="Al-Hadith"><a href="#Al-Hadith" class="headerlink" title="Al Hadith"></a>Al Hadith</h2><img src="/article/useful-apps-for-muslims-that-i-use-and-recommend/alhadith.png" title="Al Hadith Best app for muslims"><p>This app has huge collection of Hadith and you can read it in bangla. Most of bangla hadith app shows to many ads and this app is totally ad free. This a very nice and clean user interface. All hadiths are categorized nicely and you can easily find what you are looking for.</p><h2 id="Athanotify-prayer-times"><a href="#Athanotify-prayer-times" class="headerlink" title="Athanotify - prayer times"></a>Athanotify - prayer times</h2><img src="/article/useful-apps-for-muslims-that-i-use-and-recommend/adhan-notify.png" title="Adhanotify - Prayer Times"><p>This is awsome app that shows adhan times as an widget and time. You can also adjust times. You can also silent your phone at prayer times. For this feature working perfectly you need to disable battery saver for this app. I tried many other apps and those did not sent notificatons correctly. This app works perfectly for this purpose.</p>]]></content>
+        <content type="html"><![CDATA[<p>There are lots of apps available for Muslims. Most of them are ad supported or you need to pay some bucks. I used several apps but currently I am using three apps that are ad free and contains many premium feature and you do not need to pay for it.</p><h2 id="Quran-Mazid"><a href="#Quran-Mazid" class="headerlink" title="Quran Mazid"></a>Quran Mazid</h2><img src="/article/useful-apps-for-muslims-that-i-use-and-recommend/Quran%20Mazid.png" title="Quran Mazid Top app for muslims"><p>This app is one of the best Quran App for android. This has a nice and clean interface. So many translations and tafsir available in different languages. You can also see word by word meaning which is very helpful who wants to understand the language.</p><p>You can hear recitation from many different reciters. Recitations can be saved offline. Something offline translation disappear if you try to clean app cache but this app allows to store recitations in another directory and downloaded recitations won’t disappear.</p><h2 id="Al-Hadith"><a href="#Al-Hadith" class="headerlink" title="Al Hadith"></a>Al Hadith</h2><img src="/article/useful-apps-for-muslims-that-i-use-and-recommend/alhadith.png" title="Al Hadith Best app for muslims"><p>This app has huge collection of Hadith and you can read it in bangla. Most of bangla hadith app shows too many ads and this app is totally ad free. This a very nice and clean user interface. All hadiths are categorized nicely and you can easily find what you are looking for.</p><h2 id="Athanotify-prayer-times"><a href="#Athanotify-prayer-times" class="headerlink" title="Athanotify - prayer times"></a>Athanotify - prayer times</h2><img src="/article/useful-apps-for-muslims-that-i-use-and-recommend/adhan-notify.png" title="Adhanotify - Prayer Times"><p>This is awsome app that shows adhan times as an widget and time. You can also adjust times. You can also silent your phone at prayer times. For this feature working perfectly you need to disable battery saver for this app. I tried many other apps and those did not sent notificatons correctly. This app works perfectly for this purpose.</p>]]></content>
       
       
       
@@ -66,11 +66,11 @@
       
         <tags>
             
+            <tag> Web Development </tag>
+            
             <tag> JavaScript </tag>
             
             <tag> JQuery </tag>
-            
-            <tag> Web Development </tag>
             
             <tag> Web Design </tag>
             
@@ -255,11 +255,11 @@
       
         <tags>
             
-            <tag> Web Design </tag>
-            
             <tag> CSS </tag>
             
             <tag> HTML </tag>
+            
+            <tag> Web Design </tag>
             
         </tags>
       
@@ -329,29 +329,6 @@
     
     
     <entry>
-      <title>How to install CodeBlocks for C/C++</title>
-      <link href="/article/install-codeblocks-windows/"/>
-      <url>/article/install-codeblocks-windows/</url>
-      
-        <content type="html"><![CDATA[<p>CodeBlocks is a very popular IDE for C/C++ which runs on Windows , Mac and Linux platforms. It’s free and open source. Installation prodedure for CodeBlocks is very easy . Let’s see the installation process.</p><a id="more"></a><h2 id="Installing-Codeblocks-in-windows"><a href="#Installing-Codeblocks-in-windows" class="headerlink" title="Installing Codeblocks in windows"></a>Installing Codeblocks in windows</h2><h4 id="Step-1-Download-the-installer"><a href="#Step-1-Download-the-installer" class="headerlink" title="Step 1: Download the installer"></a>Step 1: Download the installer</h4><p>Go to Binary download page for CodeBlocks <a href="http://www.codeblocks.org/downloads/26#windows" target="_blank" rel="noopener" title="Download CodeBlocks for windows">http://www.codeblocks.org/downloads/26</a>{:target=”_blank”} . You will see available installer there . Download the installer with MinGW compiler, installer filename will be like <code>codeblocks-xx.xxmingw-setup.exe</code></p><p><img src="/images/download-and-install-codeblocks.png" alt="Download and install Codeblocks windows" title="Download page for CodeBlocks"></p><h4 id="Step-2-Installing"><a href="#Step-2-Installing" class="headerlink" title="Step 2: Installing"></a>Step 2: Installing</h4><p>Run the downloaded installer and install with default options.</p><h2 id="Installing-CodeBlocks-in-Ubuntu"><a href="#Installing-CodeBlocks-in-Ubuntu" class="headerlink" title="Installing CodeBlocks in Ubuntu"></a>Installing CodeBlocks in Ubuntu</h2><h4 id="Installing-from-terminal"><a href="#Installing-from-terminal" class="headerlink" title="Installing from terminal"></a>Installing from terminal</h4><p>CodeBlocks will run with default gcc compiler. If you want to write c++ code, you need to add a compiler. To do that , run the following command in the terminal to install <code>g++</code> and CodeBlocks IDE.</p><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> update</span><br><span class="line">sudo apt-<span class="builtin-name">get</span> upgrade</span><br><span class="line">sudo apt-<span class="builtin-name">get</span> install g++</span><br><span class="line">sudo apt-<span class="builtin-name">get</span> install codeblocks -y</span><br></pre></td></tr></table></figure><h4 id="Installing-from-Ubuntu-Software-Center"><a href="#Installing-from-Ubuntu-Software-Center" class="headerlink" title="Installing from Ubuntu Software Center"></a>Installing from Ubuntu Software Center</h4><p>CodeBlocks is also available in Ubuntu Software Center. You can search and install it.</p><p><img src="/images/codeblocks-ubuntu-software-center.png" alt="CodeBlocks install from Ubuntu Software Center" title="CodeBlocks install from Ubuntu Software Center"></p><p>For details you can also see the documentaion on the official site.</p><ul><li><a href="http://wiki.codeblocks.org/index.php/Installing_Code::Blocks" target="_blank" rel="noopener" title="Ubuntu Wiki for CodeBlocks installation">Ubuntu Wiki for CodeBlocks installation</a>{:target=”_blank”}</li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> C </tag>
-            
-            <tag> C++ </tag>
-            
-            <tag> Programming </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Fast Coding HTML , CSS with Emmet</title>
       <link href="/article/fast-html-css-coding-with-emmet/"/>
       <url>/article/fast-html-css-coding-with-emmet/</url>
@@ -362,11 +339,34 @@
       
         <tags>
             
-            <tag> Web Development </tag>
-            
             <tag> CSS </tag>
             
             <tag> HTML </tag>
+            
+            <tag> Web Development </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to install CodeBlocks for C/C++</title>
+      <link href="/article/install-codeblocks-windows/"/>
+      <url>/article/install-codeblocks-windows/</url>
+      
+        <content type="html"><![CDATA[<p>CodeBlocks is a very popular IDE for C/C++ which runs on Windows , Mac and Linux platforms. It’s free and open source. Installation prodedure for CodeBlocks is very easy . Let’s see the installation process.</p><a id="more"></a><h2 id="Installing-Codeblocks-in-windows"><a href="#Installing-Codeblocks-in-windows" class="headerlink" title="Installing Codeblocks in windows"></a>Installing Codeblocks in windows</h2><h4 id="Step-1-Download-the-installer"><a href="#Step-1-Download-the-installer" class="headerlink" title="Step 1: Download the installer"></a>Step 1: Download the installer</h4><p>Go to Binary download page for CodeBlocks <a href="http://www.codeblocks.org/downloads/26#windows" target="_blank" rel="noopener" title="Download CodeBlocks for windows">http://www.codeblocks.org/downloads/26</a>{:target=”_blank”} . You will see available installer there . Download the installer with MinGW compiler, installer filename will be like <code>codeblocks-xx.xxmingw-setup.exe</code></p><p><img src="/images/download-and-install-codeblocks.png" alt="Download and install Codeblocks windows" title="Download page for CodeBlocks"></p><h4 id="Step-2-Installing"><a href="#Step-2-Installing" class="headerlink" title="Step 2: Installing"></a>Step 2: Installing</h4><p>Run the downloaded installer and install with default options.</p><h2 id="Installing-CodeBlocks-in-Ubuntu"><a href="#Installing-CodeBlocks-in-Ubuntu" class="headerlink" title="Installing CodeBlocks in Ubuntu"></a>Installing CodeBlocks in Ubuntu</h2><h4 id="Installing-from-terminal"><a href="#Installing-from-terminal" class="headerlink" title="Installing from terminal"></a>Installing from terminal</h4><p>CodeBlocks will run with default gcc compiler. If you want to write c++ code, you need to add a compiler. To do that , run the following command in the terminal to install <code>g++</code> and CodeBlocks IDE.</p><figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> update</span><br><span class="line">sudo apt-<span class="builtin-name">get</span> upgrade</span><br><span class="line">sudo apt-<span class="builtin-name">get</span> install g++</span><br><span class="line">sudo apt-<span class="builtin-name">get</span> install codeblocks -y</span><br></pre></td></tr></table></figure><h4 id="Installing-from-Ubuntu-Software-Center"><a href="#Installing-from-Ubuntu-Software-Center" class="headerlink" title="Installing from Ubuntu Software Center"></a>Installing from Ubuntu Software Center</h4><p>CodeBlocks is also available in Ubuntu Software Center. You can search and install it.</p><p><img src="/images/codeblocks-ubuntu-software-center.png" alt="CodeBlocks install from Ubuntu Software Center" title="CodeBlocks install from Ubuntu Software Center"></p><p>For details you can also see the documentaion on the official site.</p><ul><li><a href="http://wiki.codeblocks.org/index.php/Installing_Code::Blocks" target="_blank" rel="noopener" title="Ubuntu Wiki for CodeBlocks installation">Ubuntu Wiki for CodeBlocks installation</a>{:target=”_blank”}</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Programming </tag>
+            
+            <tag> C </tag>
+            
+            <tag> C++ </tag>
             
         </tags>
       
