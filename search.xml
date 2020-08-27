@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>I don&#39;t hate JQuery</title>
+      <link href="/article/i-don-t-hate-jquery/"/>
+      <url>/article/i-don-t-hate-jquery/</url>
+      
+        <content type="html"><![CDATA[<p><img src="jquery-logo-blue.png" alt="I don&#39;t hate JQuery"></p><p>Should I hate a library or framework ? My answer is “No”. Every library or framework is created for a reason. If that matches your needs you can use it in your projects otherwise do it on your own. Nothing to be hated here.</p><p>Recently, Bootstrap 5 alpha is released and Bootstrap will no longer be using JQuery. That’s a good decision indeed. Core JavaScript has improved a lot and we don’t need to support old Internet Explorer. I appreciate their approach.</p><p>JQuery actually helped core JavaScript to improve. JavaScript now have <code>fetch</code> API. That made handling HTTP request easier, That API came after JQuery <code>ajax</code> introduced. If you need old browser support you can use JQuery.</p><p>If you need to scale your application for millions of users, you don’t want to add extra JS file to the web page, that’s fine. But if you have a small number of user for your application and you don’t need optimization for million users why don’t use JQuery ?</p><p>JQuery is developer friendly and easy to learn. Small size JQuery file is not a big deal when you can code more easily than vanilla JavaScript.</p><p>It’s 2020 and we got some powerful JS frameworks and libraries like Angular , React , Vue. This made the development process made easier. You may not need JQuery now a days. But it is still useful for very small projects and you don’t want to mess everything using a tons of JavaScript.</p><p>Use framework or libraries according to your need or project requirements. No hate please, Spread love.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Web Development </tag>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> JQuery </tag>
+            
+            <tag> Web Design </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>My blog is now using Hexo</title>
       <link href="/article/my-blog-is-now-using-hexo/"/>
       <url>/article/my-blog-is-now-using-hexo/</url>
@@ -15,6 +40,29 @@
         <tags>
             
             <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Mozilla Localizer Meetup 2019</title>
+      <link href="/article/mozilla-localizer-meetup-2019/"/>
+      <url>/article/mozilla-localizer-meetup-2019/</url>
+      
+        <content type="html"><![CDATA[<p>I joined Mozilla localization workshop on 9-10 November at Dhaka. It was nice experience for me. This blog post is for sharing my personal experience about the localization meeting.</p><p>Computer and internet is still is mystery for most of the Bengali speaking people. I always thought about them. If they could read the things in Bengali they could easily get access to the world of internet and other technologies easily and I always want to do something for them. Recently I started contributing on localization for some products of Mozilla. But why Mozilla ? Well , both , I and Mozilla want open , accessible web for all.</p><p>I heard about the localization workshop from “ bn_BD localization” Facebook group. I registered for the workshop providing my poonton profile and I was finally invited.</p><p><img src="https://miro.medium.com/max/1200/0*x8YyXobyY5Omwx4D.jpg" alt="Image for post"></p><p>Jeff Beatty speaking at l10n meeting Dhaka</p><p>First day of the workshop was started with the introduction with Jeff Beatty in a video call who is the head of localization of Mozilla. He is a nice guy. He shared information about Mozilla . We had some guidelines for the localization from him. He shared his thoughts and some useful information about localization market.</p><p>According to the guidelines from Jeff Beatty , we worked on creating a <strong>single style guide</strong> for Bengali language. Previously there was two locales bn_BD and bn_IN, now both of two are merged into a single locale BN. Mahay Alam Khan from Bangladesh and Biraj Karmakar from India lead the session. We discussed on the common difference of styles and agreed to a point. There was a poll for every conflicts and participating members voted for their choices. A style guide was finalized in this process.</p><p>There was a dedicated session about <strong>Poontoon</strong> , <strong>Transvision</strong> and other tools that can help to localize. We got general guidelines from the senior contributors Mahay Alam Khan, Belayet Hossain , Biraj Karmakar etc.</p><p>We worked on building a <strong>Glossary of words</strong>, where we tried to put most frequently used and confusing words for localization together. We worked on nearly one thousand words.</p><p>We all shared our thoughts , problems , solutions of the problems and possibilities about localization. I felt great being there as a part of Mozilla localization community. My first Mozilla meetup was really a nice experience .</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Mozilla </tag>
+            
+            <tag> Firefox </tag>
+            
+            <tag> Localization </tag>
             
         </tags>
       
