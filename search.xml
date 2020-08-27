@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>How prevent SQL injection</title>
+      <link href="/article/how-prevent-sql-injection/"/>
+      <url>/article/how-prevent-sql-injection/</url>
+      
+        <content type="html"><![CDATA[<br><img src="/article/how-prevent-sql-injection/sql-injection.jpg" title="Prevent SQL Injection"><p>A SQL injection attack consists of insertion or “injection” of a SQL query via the input data from the client to the application i.e web browser. A successful SQL injection exploit can read sensitive data from the database, modify database data , execute administration operations on the database.</p><p>Suppose, We are visiting a page to view a student information with id = 11 , the page URL is something like <code>student.php?id=11</code></p><p>Behind the scene this runs a query like this</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> <span class="keyword">id</span> = $<span class="keyword">id</span></span><br></pre></td></tr></table></figure><p>If we hit a URL <code>student.php?id=11 OR 1=1</code> this will run the query because this will run a query like this</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> <span class="keyword">id</span> = <span class="number">11</span> <span class="keyword">OR</span> <span class="number">1</span> = <span class="number">1</span></span><br></pre></td></tr></table></figure><p>and this statement is TRUE and this will be executed in the database. Hackers will be able to inject malicious code and run it on the database.</p><p>To prevent SQL injection, we will have to sanitize the variable received from the user. There are may different ways to do this. One of the easiest ways is to use <code>prepare</code> method with PDO in PHP.</p><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$stmt = $pdo-&gt;prepare(<span class="string">'SELECT * FROM students WHERE id = :id'</span>);</span><br><span class="line">$stmt-&gt;bindParam(<span class="string">':id'</span>, id);</span><br><span class="line"></span><br><span class="line">$stmt-&gt;execute();</span><br></pre></td></tr></table></figure><p><code>prepare</code> method sanitizes the query and SQL injection does not work. It’s a very simple trick, isn’t it ?</p><p>Remember , Never assign unnecessary permission to a MySQL user. For better security you can install WAF(Web Application Firewall ) and configure it correctly, this will prevent the web app from different types of attacks.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+            <tag> PHP </tag>
+            
+            <tag> Database </tag>
+            
+            <tag> Hacking </tag>
+            
+            <tag> Security </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Useful apps for Muslims that I use and recommend</title>
+      <link href="/article/useful-apps-for-muslims-that-i-use-and-recommend/"/>
+      <url>/article/useful-apps-for-muslims-that-i-use-and-recommend/</url>
+      
+        <content type="html"><![CDATA[<p>There are lots of apps available for Muslims. Most of them are ad supported or you need to pay some bucks. I used several apps but currently I am using three apps that are ad free and contains many premium feature and you do not need to pay for it.</p><h2 id="Quran-Mazid"><a href="#Quran-Mazid" class="headerlink" title="Quran Mazid"></a>Quran Mazid</h2><img src="/article/useful-apps-for-muslims-that-i-use-and-recommend/Quran%20Mazid.png" title="Quran Mazid Top app for muslims"><p>This app is one of the best Quran App for android. This has a nice and clean interface. So many translations and tafsir available in different languages. You can also see word by word meaning which is very helpful who wants to understand the language.</p><p>You can hear recitation from many different reciters. Recitations can be saved offline. Something offline translation disappear if you try to clean app cache but this app allows to store recitations in another directory and downloaded recitations won’t disappear.</p><h2 id="Al-Hadith"><a href="#Al-Hadith" class="headerlink" title="Al Hadith"></a>Al Hadith</h2><img src="/article/useful-apps-for-muslims-that-i-use-and-recommend/alhadith.png" title="Al Hadith Best app for muslims"><p>This app has huge collection of Hadith and you can read it in bangla. Most of bangla hadith app shows to many ads and this app is totally ad free. This a very nice and clean user interface. All hadiths are categorized nicely and you can easily find what you are looking for.</p><h2 id="Athanotify-prayer-times"><a href="#Athanotify-prayer-times" class="headerlink" title="Athanotify - prayer times"></a>Athanotify - prayer times</h2><img src="/article/useful-apps-for-muslims-that-i-use-and-recommend/adhan-notify.png" title="Adhanotify - Prayer Times"><p>This is awsome app that shows adhan times as an widget and time. You can also adjust times. You can also silent your phone at prayer times. For this feature working perfectly you need to disable battery saver for this app. I tried many other apps and those did not sent notificatons correctly. This app works perfectly for this purpose.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Islam </tag>
+            
+            <tag> Lifestyle </tag>
+            
+            <tag> Android </tag>
+            
+            <tag> Mobile Apps </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>I don&#39;t hate JQuery</title>
       <link href="/article/i-don-t-hate-jquery/"/>
       <url>/article/i-don-t-hate-jquery/</url>
@@ -14,11 +66,11 @@
       
         <tags>
             
-            <tag> Web Development </tag>
-            
             <tag> JavaScript </tag>
             
             <tag> JQuery </tag>
+            
+            <tag> Web Development </tag>
             
             <tag> Web Design </tag>
             
@@ -203,11 +255,11 @@
       
         <tags>
             
+            <tag> Web Design </tag>
+            
             <tag> CSS </tag>
             
             <tag> HTML </tag>
-            
-            <tag> Web Design </tag>
             
         </tags>
       
@@ -277,29 +329,6 @@
     
     
     <entry>
-      <title>Fast Coding HTML , CSS with Emmet</title>
-      <link href="/article/fast-html-css-coding-with-emmet/"/>
-      <url>/article/fast-html-css-coding-with-emmet/</url>
-      
-        <content type="html"><![CDATA[<p>Emmet is very popular tool for writing HTML, CSS code rapidly. This can greatly improve your workflow. Emmet can be used in all popular text editors like Visual Studio Code, Brackets, Notepad++ , Sublime Text , Atom etc. Visual Studio Code comes with built in Emmet support. I recommend using Visual Studio Code to follow this post. Any code editor with Emmet installed is also good to go. In this post I’ll discuss about using Emmet efficiently.</p><a id="more"></a><p>Open a blank HTML file and type <code>html:5</code> or <code>!</code> and hit <code>Tab</code> Key to expand. <code>Enter</code> key should also work for Visual Studio code.</p><p><img src="/images/html5.gif" alt="Emmet html5 markup tutorial" title="Emmet html5 markup tutorial"></p><p>Looks fun ! right ? Let’s go to deep to find more fun !</p><h2 id="Generating-HTML-elements-with-class-and-id"><a href="#Generating-HTML-elements-with-class-and-id" class="headerlink" title="Generating HTML elements with class and id"></a>Generating HTML elements with class and id</h2><p>We can use css like syntax for generating HTML elements. To create an element with a class syntax will be like <code>elem.classname</code>. Suppose, we need to create a <code>div</code> tag with class <code>class1</code>. To get the result we should write <code>div.class1</code> and hit <code>Tab</code>.</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"class1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>If you want to add multiple class put the classname in succession. i.e <code>p.class1.class2.class3</code></p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"class1 class2 class3"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure><p>For generating elements with id syntax will be like <code>elem#id</code> i.e <code>h2.heading</code></p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">"heading"</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure><p>Note: When generating <code>div</code> you can use <code>.class</code> or <code>#id</code> directly without writing the element name .</p><h2 id="Child-elements"><a href="#Child-elements" class="headerlink" title="Child elements"></a>Child elements</h2><p>We can use <code>&gt;</code> to create a child element of an element. <code>ul&gt;li&gt;a</code> will produce the following code.</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Sibling-element"><a href="#Sibling-element" class="headerlink" title="Sibling element"></a>Sibling element</h2><p>We can use <code>+</code> sign to write sibling elements. <code>h1+h2+h3</code> will produce the following output.</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Multiply-element-with-numbering"><a href="#Multiply-element-with-numbering" class="headerlink" title="Multiply element with numbering"></a>Multiply element with numbering</h2><p><code>*</code> sign can be used to generate multiple element and <code>$</code> sign for numbering and <code>{ }</code> is to insert text inside the element. i.e <code>ul&gt;li*5&gt;a{Item $}</code></p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 4<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 5<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Lorem-Ipsum"><a href="#Lorem-Ipsum" class="headerlink" title="Lorem Ipsum"></a>Lorem Ipsum</h2><p>We can generate Lorem ipsum dummy text. Just write <code>lorem</code> and hit <code>Tab</code>.</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, dolor earum ex magni ipsum illum, sapiente odio laboriosam velit debitis corporis, quisquam sit. Ipsam, nisi totam aperiam quos recusandae eum!</span><br></pre></td></tr></table></figure><p>We can also set the number of words for generated dummy text , i.e <code>lorem5</code> will generate text with 5 words.</p><h2 id="Writing-css-with-Emmet"><a href="#Writing-css-with-Emmet" class="headerlink" title="Writing css with Emmet"></a>Writing css with Emmet</h2><p>Emmet has abbreviation for known CSS properties, like <code>margin</code> is <code>m</code> , <code>padding</code> is <code>p</code> , <code>border-bottom</code> is <code>bdb</code> etc.<br>We can directly inject values like <code>m10</code> for <code>margin:10px</code> , <code>m10-20</code> for <code>margin:10px 20px</code></p><h2 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h2><p>Emmet has alias for units.</p><ul><li>px → default</li><li>p → %</li><li>e → em</li><li>r → rem</li><li>x → ex</li></ul><p>We can use this alias units</p><ul><li><code>w100p</code> → <code>width:100%</code></li><li><code>m10e</code> → <code>margin:10em</code><h2 id="Multiple-css-properties"><a href="#Multiple-css-properties" class="headerlink" title="Multiple css properties"></a>Multiple css properties</h2>We can write multiple css properties together using <code>+</code> sign. i.e <code>m10+p10+ovh+db</code></li></ul><p><img src="/images/multiple-css-properties-emmet-tutorial.gif" alt="Multiple css properties emmet" title="Multiple css properties emmet"></p><h2 id="Going-further"><a href="#Going-further" class="headerlink" title="Going further"></a>Going further</h2><p>I’ve shown very fundamental and most common usage for Emmet. You can learn more from</p><ul><li><a href="https://docs.emmet.io/cheat-sheet/" target="_blank" rel="noopener" title="Emmet Cheatsheet">Emmet Cheatsheet</a></li><li><a href="https://docs.emmet.io/" target="_blank" rel="noopener" title="Emmet Documentation">Emmet Documentation</a></li></ul><p>I love to code with Emmet . What about you ? Feel free to comment below !</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> CSS </tag>
-            
-            <tag> HTML </tag>
-            
-            <tag> Web Development </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>How to install CodeBlocks for C/C++</title>
       <link href="/article/install-codeblocks-windows/"/>
       <url>/article/install-codeblocks-windows/</url>
@@ -323,6 +352,29 @@
     
     
     <entry>
+      <title>Fast Coding HTML , CSS with Emmet</title>
+      <link href="/article/fast-html-css-coding-with-emmet/"/>
+      <url>/article/fast-html-css-coding-with-emmet/</url>
+      
+        <content type="html"><![CDATA[<p>Emmet is very popular tool for writing HTML, CSS code rapidly. This can greatly improve your workflow. Emmet can be used in all popular text editors like Visual Studio Code, Brackets, Notepad++ , Sublime Text , Atom etc. Visual Studio Code comes with built in Emmet support. I recommend using Visual Studio Code to follow this post. Any code editor with Emmet installed is also good to go. In this post I’ll discuss about using Emmet efficiently.</p><a id="more"></a><p>Open a blank HTML file and type <code>html:5</code> or <code>!</code> and hit <code>Tab</code> Key to expand. <code>Enter</code> key should also work for Visual Studio code.</p><p><img src="/images/html5.gif" alt="Emmet html5 markup tutorial" title="Emmet html5 markup tutorial"></p><p>Looks fun ! right ? Let’s go to deep to find more fun !</p><h2 id="Generating-HTML-elements-with-class-and-id"><a href="#Generating-HTML-elements-with-class-and-id" class="headerlink" title="Generating HTML elements with class and id"></a>Generating HTML elements with class and id</h2><p>We can use css like syntax for generating HTML elements. To create an element with a class syntax will be like <code>elem.classname</code>. Suppose, we need to create a <code>div</code> tag with class <code>class1</code>. To get the result we should write <code>div.class1</code> and hit <code>Tab</code>.</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"class1"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>If you want to add multiple class put the classname in succession. i.e <code>p.class1.class2.class3</code></p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"class1 class2 class3"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure><p>For generating elements with id syntax will be like <code>elem#id</code> i.e <code>h2.heading</code></p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">"heading"</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br></pre></td></tr></table></figure><p>Note: When generating <code>div</code> you can use <code>.class</code> or <code>#id</code> directly without writing the element name .</p><h2 id="Child-elements"><a href="#Child-elements" class="headerlink" title="Child elements"></a>Child elements</h2><p>We can use <code>&gt;</code> to create a child element of an element. <code>ul&gt;li&gt;a</code> will produce the following code.</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Sibling-element"><a href="#Sibling-element" class="headerlink" title="Sibling element"></a>Sibling element</h2><p>We can use <code>+</code> sign to write sibling elements. <code>h1+h2+h3</code> will produce the following output.</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Multiply-element-with-numbering"><a href="#Multiply-element-with-numbering" class="headerlink" title="Multiply element with numbering"></a>Multiply element with numbering</h2><p><code>*</code> sign can be used to generate multiple element and <code>$</code> sign for numbering and <code>{ }</code> is to insert text inside the element. i.e <code>ul&gt;li*5&gt;a{Item $}</code></p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 4<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>Item 5<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Lorem-Ipsum"><a href="#Lorem-Ipsum" class="headerlink" title="Lorem Ipsum"></a>Lorem Ipsum</h2><p>We can generate Lorem ipsum dummy text. Just write <code>lorem</code> and hit <code>Tab</code>.</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, dolor earum ex magni ipsum illum, sapiente odio laboriosam velit debitis corporis, quisquam sit. Ipsam, nisi totam aperiam quos recusandae eum!</span><br></pre></td></tr></table></figure><p>We can also set the number of words for generated dummy text , i.e <code>lorem5</code> will generate text with 5 words.</p><h2 id="Writing-css-with-Emmet"><a href="#Writing-css-with-Emmet" class="headerlink" title="Writing css with Emmet"></a>Writing css with Emmet</h2><p>Emmet has abbreviation for known CSS properties, like <code>margin</code> is <code>m</code> , <code>padding</code> is <code>p</code> , <code>border-bottom</code> is <code>bdb</code> etc.<br>We can directly inject values like <code>m10</code> for <code>margin:10px</code> , <code>m10-20</code> for <code>margin:10px 20px</code></p><h2 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h2><p>Emmet has alias for units.</p><ul><li>px → default</li><li>p → %</li><li>e → em</li><li>r → rem</li><li>x → ex</li></ul><p>We can use this alias units</p><ul><li><code>w100p</code> → <code>width:100%</code></li><li><code>m10e</code> → <code>margin:10em</code><h2 id="Multiple-css-properties"><a href="#Multiple-css-properties" class="headerlink" title="Multiple css properties"></a>Multiple css properties</h2>We can write multiple css properties together using <code>+</code> sign. i.e <code>m10+p10+ovh+db</code></li></ul><p><img src="/images/multiple-css-properties-emmet-tutorial.gif" alt="Multiple css properties emmet" title="Multiple css properties emmet"></p><h2 id="Going-further"><a href="#Going-further" class="headerlink" title="Going further"></a>Going further</h2><p>I’ve shown very fundamental and most common usage for Emmet. You can learn more from</p><ul><li><a href="https://docs.emmet.io/cheat-sheet/" target="_blank" rel="noopener" title="Emmet Cheatsheet">Emmet Cheatsheet</a></li><li><a href="https://docs.emmet.io/" target="_blank" rel="noopener" title="Emmet Documentation">Emmet Documentation</a></li></ul><p>I love to code with Emmet . What about you ? Feel free to comment below !</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Web Development </tag>
+            
+            <tag> CSS </tag>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PHP 00: Introduction to PHP</title>
       <link href="/article/introduction-to-php/"/>
       <url>/article/introduction-to-php/</url>
@@ -335,9 +387,9 @@
             
             <tag> Web Development </tag>
             
-            <tag> Programming </tag>
-            
             <tag> PHP </tag>
+            
+            <tag> Programming </tag>
             
         </tags>
       
