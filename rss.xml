@@ -9,8 +9,28 @@
     <atom:link href="/rss.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 27 Aug 2020 13:28:55 GMT</pubDate>
+    <pubDate>Mon, 25 Jan 2021 07:39:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>JSX Emmet integration for VSCode</title>
+      <link>https://monirulalom.com/article/jsx-emmet-integration-for-vscode/</link>
+      <guid>https://monirulalom.com/article/jsx-emmet-integration-for-vscode/</guid>
+      <pubDate>Sun, 24 Jan 2021 10:09:42 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;br&gt;&lt;img src=&quot;/article/jsx-emmet-integration-for-vscode/reactjsxemmetinactionvscode.gif&quot; title=&quot;React Jsx Emmet in actionVSCode&quot;&gt;&lt;p&gt;Emmet is
+        
+      
+      </description>
+      
+      
+      <content:encoded><![CDATA[<br><img src="/article/jsx-emmet-integration-for-vscode/reactjsxemmetinactionvscode.gif" title="React Jsx Emmet in actionVSCode"><p>Emmet is very useful for writing code fast. But you will have to enable JSX support for Emmnet in VSCode. The procces is very easy. First open VSCode settings.</p><img src="/article/jsx-emmet-integration-for-vscode/vscode-settings.jpg" title="Open VSCode Settings"><p>Go to Extensions &gt; Emmet and add item <code>javascript</code> with value <code>javascriptreact</code> as shown in the image below.</p><img src="/article/jsx-emmet-integration-for-vscode/emmet-jsx-vscode.jpg" title="React JSX Support Emmet VSCode"><p>Now you should be able use Emmet for writting you React app.</p>]]></content:encoded>
+      
+      <comments>https://monirulalom.com/article/jsx-emmet-integration-for-vscode/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>How to prevent SQL injection</title>
