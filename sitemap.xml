@@ -2,6 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://monirulalom.com/article/how-to-install-odoo-macos/</loc>
+    
+    <lastmod>2026-03-16T10:23:56.934Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://monirulalom.com/article/odoo-custom-module-development-part-6-reports-demo-data-and-tests/</loc>
+    
+    <lastmod>2026-03-16T10:22:21.163Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://monirulalom.com/article/odoo-custom-module-development-part-5-relations-computed-fields-and-business-logic/</loc>
+    
+    <lastmod>2026-03-16T10:22:21.162Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://monirulalom.com/article/odoo-custom-module-development-part-3-security-and-access-rights/</loc>
+    
+    <lastmod>2026-03-16T10:22:21.161Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://monirulalom.com/article/odoo-custom-module-development-part-4-menus-actions-and-views/</loc>
+    
+    <lastmod>2026-03-16T10:22:21.161Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://monirulalom.com/article/odoo-custom-module-development-part-2-models-and-fields/</loc>
+    
+    <lastmod>2026-03-16T10:22:21.156Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://monirulalom.com/article/odoo-custom-module-development-part-1-create-your-first-module/</loc>
+    
+    <lastmod>2026-03-16T10:22:21.135Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://monirulalom.com/article/how-to-install-postgresql-macos/</loc>
     
     <lastmod>2026-03-16T09:31:18.090Z</lastmod>
