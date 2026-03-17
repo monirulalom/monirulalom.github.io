@@ -45,9 +45,9 @@
             
             <tag> Python </tag>
             
-            <tag> Development </tag>
-            
             <tag> ORM </tag>
+            
+            <tag> Development </tag>
             
             <tag> Business Logic </tag>
             
@@ -95,13 +95,13 @@
       
         <tags>
             
-            <tag> Security </tag>
-            
             <tag> Odoo </tag>
             
-            <tag> Development </tag>
+            <tag> Security </tag>
             
             <tag> ORM </tag>
+            
+            <tag> Development </tag>
             
             <tag> Access Control </tag>
             
@@ -128,9 +128,9 @@
             
             <tag> Python </tag>
             
-            <tag> Development </tag>
-            
             <tag> ORM </tag>
+            
+            <tag> Development </tag>
             
         </tags>
       
@@ -201,11 +201,11 @@
       
         <tags>
             
-            <tag> Database </tag>
-            
             <tag> PostgreSQL </tag>
             
             <tag> macOS </tag>
+            
+            <tag> Database </tag>
             
             <tag> Homebrew </tag>
             
@@ -228,9 +228,9 @@
             
             <tag> Web Development </tag>
             
-            <tag> JavaScript </tag>
-            
             <tag> React </tag>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -249,11 +249,11 @@
       
         <tags>
             
+            <tag> Database </tag>
+            
             <tag> MySQL </tag>
             
             <tag> PHP </tag>
-            
-            <tag> Database </tag>
             
             <tag> Hacking </tag>
             
@@ -368,9 +368,9 @@
       
         <tags>
             
-            <tag> PHP </tag>
-            
             <tag> Web Development </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
       
@@ -389,9 +389,9 @@
       
         <tags>
             
-            <tag> PHP </tag>
-            
             <tag> Web Development </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
       
@@ -410,9 +410,9 @@
       
         <tags>
             
-            <tag> PHP </tag>
-            
             <tag> Web Development </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
       
@@ -431,9 +431,9 @@
       
         <tags>
             
-            <tag> PHP </tag>
-            
             <tag> Web Development </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
       
@@ -513,9 +513,9 @@
       
         <tags>
             
-            <tag> PHP </tag>
-            
             <tag> Web Development </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
       
@@ -534,9 +534,9 @@
       
         <tags>
             
-            <tag> PHP </tag>
-            
             <tag> Web Development </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
       
@@ -620,11 +620,11 @@
       
         <tags>
             
-            <tag> PHP </tag>
-            
             <tag> Web Development </tag>
             
             <tag> Programming </tag>
+            
+            <tag> PHP </tag>
             
         </tags>
       
