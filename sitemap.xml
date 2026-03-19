@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://monirulalom.com/article/laravel-request-lifecycle-explained-step-by-step/</loc>
+    
+    <lastmod>2026-03-19T10:47:03.249Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://monirulalom.com/article/how-to-install-odoo-macos/</loc>
     
     <lastmod>2026-03-16T10:23:56.934Z</lastmod>
@@ -79,6 +86,13 @@
   </url>
   
   <url>
+    <loc>https://monirulalom.com/article/php-comments/</loc>
+    
+    <lastmod>2026-03-16T09:09:14.448Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://monirulalom.com/article/php-tags/</loc>
     
     <lastmod>2026-03-16T09:09:14.448Z</lastmod>
@@ -93,13 +107,6 @@
   </url>
   
   <url>
-    <loc>https://monirulalom.com/article/setting-up-lamp-server-on-ubuntu/</loc>
-    
-    <lastmod>2026-03-16T09:09:14.448Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://monirulalom.com/article/setting-up-environment-for-php-using-xampp/</loc>
     
     <lastmod>2026-03-16T09:09:14.448Z</lastmod>
@@ -107,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://monirulalom.com/article/test-sending-emails-in-php-xampp-mailhog/</loc>
+    <loc>https://monirulalom.com/article/setting-up-lamp-server-on-ubuntu/</loc>
     
     <lastmod>2026-03-16T09:09:14.448Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://monirulalom.com/article/php-comments/</loc>
+    <loc>https://monirulalom.com/article/test-sending-emails-in-php-xampp-mailhog/</loc>
     
     <lastmod>2026-03-16T09:09:14.448Z</lastmod>
     
@@ -149,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://monirulalom.com/article/install-codeblocks-windows/</loc>
+    <loc>https://monirulalom.com/article/i-don-t-hate-jquery/</loc>
     
     <lastmod>2026-03-16T09:09:14.445Z</lastmod>
     
@@ -163,14 +170,7 @@
   </url>
   
   <url>
-    <loc>https://monirulalom.com/article/jsx-emmet-integration-for-vscode/</loc>
-    
-    <lastmod>2026-03-16T09:09:14.445Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://monirulalom.com/article/i-don-t-hate-jquery/</loc>
+    <loc>https://monirulalom.com/article/install-codeblocks-windows/</loc>
     
     <lastmod>2026-03-16T09:09:14.445Z</lastmod>
     
@@ -178,6 +178,13 @@
   
   <url>
     <loc>https://monirulalom.com/article/jekyll-awesome-platform-for-blogging/</loc>
+    
+    <lastmod>2026-03-16T09:09:14.445Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://monirulalom.com/article/jsx-emmet-integration-for-vscode/</loc>
     
     <lastmod>2026-03-16T09:09:14.445Z</lastmod>
     
