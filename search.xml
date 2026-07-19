@@ -45,9 +45,9 @@
             
             <tag> Python </tag>
             
-            <tag> ORM </tag>
-            
             <tag> Development </tag>
+            
+            <tag> ORM </tag>
             
             <tag> Business Logic </tag>
             
@@ -95,13 +95,13 @@
       
         <tags>
             
-            <tag> Odoo </tag>
-            
             <tag> Security </tag>
             
-            <tag> ORM </tag>
+            <tag> Odoo </tag>
             
             <tag> Development </tag>
+            
+            <tag> ORM </tag>
             
             <tag> Access Control </tag>
             
@@ -128,9 +128,9 @@
             
             <tag> PostgreSQL </tag>
             
-            <tag> ORM </tag>
-            
             <tag> Development </tag>
+            
+            <tag> ORM </tag>
             
         </tags>
       
@@ -201,11 +201,11 @@
       
         <tags>
             
+            <tag> Database </tag>
+            
             <tag> macOS </tag>
             
             <tag> PostgreSQL </tag>
-            
-            <tag> Database </tag>
             
             <tag> Homebrew </tag>
             
@@ -235,6 +235,33 @@
             <tag> Request Lifecycle </tag>
             
             <tag> Middleware </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Angular Two-Way Binding Explained</title>
+      <link href="/article/angular-two-way-binding-explained/"/>
+      <url>/article/angular-two-way-binding-explained/</url>
+      
+        <content type="html"><![CDATA[<p>If you are learning Angular after React (or React after Angular), one topic quickly becomes important: <strong>how data moves between UI and state</strong>.</p><p>Angular is known for two-way binding. React is known for one-directional (one-way) data flow.</p><p>Both are useful, but they encourage different mental models.</p><p>This article explains Angular two-way binding in a simple way, then compares it directly with React so the difference is crystal clear.</p><a id="more"></a><h2 id="What-is-data-binding"><a href="#What-is-data-binding" class="headerlink" title="What is data binding?"></a>What is data binding?</h2><p>Data binding means connecting data from your component class/state to the template (UI), and sometimes from the UI back to the class/state.</p><p>In frontend apps, this usually means:</p><ul><li>showing values in inputs, text, and components</li><li>updating UI when data changes</li><li>updating data when user types or clicks</li></ul><h2 id="Angular-binding-types-quick-map"><a href="#Angular-binding-types-quick-map" class="headerlink" title="Angular binding types (quick map)"></a>Angular binding types (quick map)</h2><p>Before two-way binding, understand Angular’s core binding types:</p><ol><li><p>Interpolation: <code>Angular Two-Way Binding Explained</code><br>Shows data from component to template.</p></li><li><p>Property binding: <code>[value]=&quot;username&quot;</code><br>Sets DOM/component property from component to template.</p></li><li><p>Event binding: <code>(input)=&quot;onInput($event)&quot;</code><br>Handles UI event from template to component.</p></li><li><p>Two-way binding: <code>[(ngModel)]=&quot;username&quot;</code><br>Combines property + event binding.</p></li></ol><p>So two-way binding is not magic. It is just a shorthand for “value down, event up”.</p><h2 id="Angular-two-way-binding-in-simple-words"><a href="#Angular-two-way-binding-in-simple-words" class="headerlink" title="Angular two-way binding in simple words"></a>Angular two-way binding in simple words</h2><p>Two-way binding means:</p><ul><li>component value updates the input</li><li>user input updates the component value</li></ul><p>Both stay in sync.</p><h3 id="Basic-example-with-ngModel"><a href="#Basic-example-with-ngModel" class="headerlink" title="Basic example with ngModel"></a>Basic example with <code>ngModel</code></h3><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="comment">// app.component.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'app-root'</span>,</span><br><span class="line">  templateUrl: <span class="string">'./app.component.html'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppComponent &#123;</span><br><span class="line">  name = <span class="string">'Monirul'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- app.component.html --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> [(<span class="attr">ngModel</span>)]=<span class="string">"name"</span> <span class="attr">placeholder</span>=<span class="string">"Enter your name"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello, &#123;&#123; name &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure><p>When user types in the input, <code>name</code> changes immediately.<br>When <code>name</code> changes in code, input value also changes.</p><h2 id="Important-setup-for-ngModel"><a href="#Important-setup-for-ngModel" class="headerlink" title="Important setup for ngModel"></a>Important setup for <code>ngModel</code></h2><p>To use <code>[(ngModel)]</code>, you need <code>FormsModule</code>.</p><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; FormsModule &#125; <span class="keyword">from</span> <span class="string">'@angular/forms'</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@NgModule</span>(&#123;</span><br><span class="line">  imports: [FormsModule]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> AppModule &#123;&#125;</span><br></pre></td></tr></table></figure><p>Without this module, Angular will throw an error for <code>ngModel</code>.</p><h2 id="Why-syntax-is-called-“banana-in-a-box”"><a href="#Why-syntax-is-called-“banana-in-a-box”" class="headerlink" title="Why [(...)] syntax is called “banana in a box”"></a>Why <code>[(...)]</code> syntax is called “banana in a box”</h2><p>You will hear developers say “banana in a box” for <code>[(...)]</code> syntax.</p><ul><li><code>[]</code> means property binding</li><li><code>()</code> means event binding</li><li>together <code>[(...)]</code> means two-way binding</li></ul><p>This syntax wraps the two directions into one readable expression.</p><h2 id="Under-the-hood-how-Angular-expands-two-way-binding"><a href="#Under-the-hood-how-Angular-expands-two-way-binding" class="headerlink" title="Under the hood: how Angular expands two-way binding"></a>Under the hood: how Angular expands two-way binding</h2><p>This line:</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> [(<span class="attr">ngModel</span>)]=<span class="string">"name"</span> /&gt;</span></span><br></pre></td></tr></table></figure><p>is conceptually similar to:</p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> [<span class="attr">ngModel</span>]=<span class="string">"name"</span> (<span class="attr">ngModelChange</span>)=<span class="string">"name = $event"</span> /&gt;</span></span><br></pre></td></tr></table></figure><p>So Angular is doing one-way down + event up.</p><p>Understanding this helps you debug forms and custom components.</p><h2 id="Two-way-binding-with-custom-components"><a href="#Two-way-binding-with-custom-components" class="headerlink" title="Two-way binding with custom components"></a>Two-way binding with custom components</h2><p>Angular also supports two-way binding between parent and child components.</p><h3 id="Child-component"><a href="#Child-component" class="headerlink" title="Child component"></a>Child component</h3><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component, EventEmitter, Input, Output &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'app-counter'</span>,</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;button (click)="decrement()"&gt;-&lt;/button&gt;</span></span><br><span class="line"><span class="string">    &lt;span&gt;&#123;&#123; count &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="string">    &lt;button (click)="increment()"&gt;+&lt;/button&gt;</span></span><br><span class="line"><span class="string">  `</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> CounterComponent &#123;</span><br><span class="line">  <span class="meta">@Input</span>() count = <span class="number">0</span>;</span><br><span class="line">  <span class="meta">@Output</span>() countChange = <span class="keyword">new</span> EventEmitter&lt;<span class="built_in">number</span>&gt;();</span><br><span class="line"></span><br><span class="line">  increment() &#123;</span><br><span class="line">    <span class="keyword">this</span>.countChange.emit(<span class="keyword">this</span>.count + <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  decrement() &#123;</span><br><span class="line">    <span class="keyword">this</span>.countChange.emit(<span class="keyword">this</span>.count - <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Parent-component-usage"><a href="#Parent-component-usage" class="headerlink" title="Parent component usage"></a>Parent component usage</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">app-counter</span> [(<span class="attr">count</span>)]=<span class="string">"total"</span>&gt;</span><span class="tag">&lt;/<span class="name">app-counter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Total: &#123;&#123; total &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure><p>Here Angular maps:</p><ul><li><code>[count]=&quot;total&quot;</code></li><li><code>(countChange)=&quot;total = $event&quot;</code></li></ul><p>This pattern is very common in reusable Angular components.</p><h2 id="React-one-directional-data-flow"><a href="#React-one-directional-data-flow" class="headerlink" title="React one-directional data flow"></a>React one-directional data flow</h2><p>React follows one-directional data flow by design.</p><p>It means data goes:</p><ul><li>parent state -&gt; child props</li></ul><p>And updates usually happen by:</p><ul><li>user event -&gt; handler -&gt; <code>setState</code>/<code>useState</code> -&gt; re-render</li></ul><p>So React keeps updates explicit. Child does not directly mutate parent state.</p><h3 id="React-controlled-input-example"><a href="#React-controlled-input-example" class="headerlink" title="React controlled input example"></a>React controlled input example</h3><figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; useState &#125; <span class="keyword">from</span> <span class="string">'react'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> [name, setName] = useState(<span class="string">'Monirul'</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;&gt;</span><br><span class="line">      &lt;input</span><br><span class="line">        value=&#123;name&#125;</span><br><span class="line">        onChange=&#123;(e) =&gt; setName(e.target.value)&#125;</span><br><span class="line">        placeholder=<span class="string">"Enter your name"</span></span><br><span class="line">      /&gt;</span><br><span class="line">      &lt;p&gt;Hello, &#123;name&#125;&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>This looks similar in behavior to Angular two-way binding, but React keeps the two steps explicit (<code>value</code> and <code>onChange</code>).</p><h2 id="Angular-vs-React-mental-model-difference"><a href="#Angular-vs-React-mental-model-difference" class="headerlink" title="Angular vs React: mental model difference"></a>Angular vs React: mental model difference</h2><p>Angular:</p><ul><li>offers built-in two-way syntax (<code>[(...)]</code>)</li><li>templates can feel more declarative for forms</li><li>faster to wire simple form fields</li></ul><p>React:</p><ul><li>enforces explicit one-way flow</li><li>more boilerplate for simple inputs</li><li>easier to track update path in large apps because state changes are explicit</li></ul><p>Neither is universally better. Each optimizes for different developer experience.</p><h2 id="Side-by-side-comparison-table"><a href="#Side-by-side-comparison-table" class="headerlink" title="Side-by-side comparison table"></a>Side-by-side comparison table</h2><table><thead><tr><th>Topic</th><th>Angular</th><th>React</th></tr></thead><tbody><tr><td>Default data flow</td><td>Supports two-way binding in templates</td><td>One-way data flow by default</td></tr><tr><td>Input binding</td><td><code>[(ngModel)]=&quot;value&quot;</code></td><td><code>value={value}</code> + <code>onChange={...}</code></td></tr><tr><td>Parent-child sync</td><td><code>@Input()</code> + <code>@Output()</code> + <code>[(prop)]</code> pattern</td><td>Props down, callback up</td></tr><tr><td>Boilerplate</td><td>Lower for basic forms</td><td>Slightly higher for controlled components</td></tr><tr><td>Debug traceability</td><td>Good, but implicit sugar can hide steps for beginners</td><td>Very explicit state update path</td></tr><tr><td>Learning curve</td><td>Easier for template-driven forms</td><td>Easier for predictable unidirectional architecture</td></tr></tbody></table><h2 id="When-Angular-two-way-binding-is-great"><a href="#When-Angular-two-way-binding-is-great" class="headerlink" title="When Angular two-way binding is great"></a>When Angular two-way binding is great</h2><p>Use it when:</p><ul><li>building standard forms quickly</li><li>prototyping fast</li><li>team is comfortable with Angular template syntax</li><li>you want concise templates for input-heavy screens</li></ul><h2 id="When-to-be-careful-with-two-way-binding"><a href="#When-to-be-careful-with-two-way-binding" class="headerlink" title="When to be careful with two-way binding"></a>When to be careful with two-way binding</h2><p>Avoid overusing it in very complex forms or deeply nested component trees without clear structure.</p><p>Why:</p><ul><li>hidden coupling can grow</li><li>debugging can become harder if many bindings update each other</li></ul><p>Best practice:</p><ul><li>keep business logic in component/service, not in template expressions</li><li>use reactive forms for complex validation and workflows</li><li>be consistent in your team conventions</li></ul><h2 id="Common-beginner-mistakes-in-Angular-two-way-binding"><a href="#Common-beginner-mistakes-in-Angular-two-way-binding" class="headerlink" title="Common beginner mistakes in Angular two-way binding"></a>Common beginner mistakes in Angular two-way binding</h2><ol><li><p>Forgetting <code>FormsModule</code><br>Result: <code>ngModel</code> not recognized.</p></li><li><p>Mixing template-driven and reactive forms carelessly<br>Result: confusing state sources.</p></li><li><p>Using two-way binding for everything<br>Result: tight coupling and harder debugging.</p></li><li><p>Expecting React-style explicit updates everywhere<br>Result: misunderstanding Angular template sugar.</p></li></ol><h2 id="How-to-explain-this-in-an-interview"><a href="#How-to-explain-this-in-an-interview" class="headerlink" title="How to explain this in an interview"></a>How to explain this in an interview</h2><p>A simple and strong answer:</p><p>“Angular supports two-way binding with syntax like <code>[(ngModel)]</code>, which syncs UI and component state in both directions. Under the hood, it is property binding plus change event binding. React uses one-way data flow where state moves down via props and updates move up via callbacks like <code>onChange</code> and <code>setState</code>. Angular is more concise for forms, while React is more explicit and predictable in large state flows.”</p><h2 id="Final-takeaway"><a href="#Final-takeaway" class="headerlink" title="Final takeaway"></a>Final takeaway</h2><p>Angular two-way binding is a productivity feature.<br>React one-way data flow is an explicit architecture choice.</p><p>For small to medium forms, Angular’s <code>[(ngModel)]</code> can feel very fast and clean.<br>For complex state-heavy applications, React’s one-way flow can make data movement easier to reason about.</p><p>The best approach is to understand both deeply and choose patterns intentionally based on project complexity.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> Angular </tag>
+            
+            <tag> React </tag>
+            
+            <tag> Data Binding </tag>
+            
+            <tag> Frontend </tag>
             
         </tags>
       
@@ -624,11 +651,11 @@
       
         <tags>
             
-            <tag> Programming </tag>
-            
             <tag> C </tag>
             
             <tag> C++ </tag>
+            
+            <tag> Programming </tag>
             
         </tags>
       
